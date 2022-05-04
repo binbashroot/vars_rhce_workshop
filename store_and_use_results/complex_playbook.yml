@@ -1,0 +1,34 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+     - name: run a command and register a result
+       shell: cat /etc/passwd |tail -10
+       register: __cat_results
+
+     - name: this prints the results of all instances of the string sssd
+       debug:
+         var: __cat_results['stdout']|lower|regex_search('sssd')|upper
+
+     - name: provide a count of all strings that match sssd
+       debug:
+         var: __cat_results['stdout']|regex_findall('sssd')|length
+
+     - name: Print the 3 string of the 4th line 
+       debug:
+         var: __cat_results['stdout_lines'][4].split(':')[2]
+
+     - name: Skip this task because nothing matching
+       debug:
+          msg: 
+            - "print these lines"
+            - "when a string is inside a var"
+       when: "'foo' in __cat_results.stdout"
+
+     - name: Match this task
+       debug:
+          msg: 
+            - "print these lines"
+            - "when a string is inside a var"
+            - "RHCE Exam here I come"
+       when: "'sshd' in __cat_results.stdout"

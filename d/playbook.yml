@@ -1,0 +1,61 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+      - debug:
+           var: inventory_var
+
+      - debug:
+           var: inventory_groups_var
+
+      - debug:
+           var: inventory_hosts_var
+
+      - debug:
+           var: groups_var
+
+      - debug:
+           var: hosts_var
+
+      - debug:
+           var: plays_var
+
+      - debug:
+           var: tasks_var
+
+      - debug:
+           var: roles_var
+
+      - debug:
+           var: facts_var
+
+- hosts: foo
+  gather_facts: False
+  tasks:
+      - debug:
+           var: inventory_var
+
+      - debug:
+           var: inventory_groups_var
+
+      - debug:
+           var: inventory_hosts_var
+
+      - debug:
+           var: groups_var
+
+      - debug:
+           var: hosts_var
+
+      - debug:
+           var: plays_var
+
+      - debug:
+           var: tasks_var
+
+      - debug:
+           var: roles_var
+
+      - debug:
+           var: facts_var
+

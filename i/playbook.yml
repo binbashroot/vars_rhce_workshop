@@ -1,0 +1,16 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+     - name:  empty var
+       debug:
+         var: set_facts_var
+
+     - name:  set var
+       set_fact:
+          set_facts_var: "This var is created by set_facts"
+
+     - name:  show var
+       debug:
+         var: set_facts_var
+

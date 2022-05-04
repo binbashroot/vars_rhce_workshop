@@ -1,0 +1,25 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+     - name: run a command and register a result
+       shell: cat /etc/password |tail -10
+       register: __cat_results
+
+     - name: this prints all __cat_results
+       debug:
+         var: __cat_results
+
+     - name: this prints the stdout of the __cat_results complete with newlines
+       debug:
+         var: __cat_results['stderr']
+
+     - name: this prints the results in a line by line format
+       debug:
+         var: __cat_results['stderr_lines']
+
+     - name: this prints the return code 
+       debug:
+         var: __cat_results['rc']
+
+

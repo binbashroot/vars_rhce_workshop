@@ -1,0 +1,5 @@
+[foo]
+localhost ansible_connnection=local inventory_hosts_var=foo
+
+
+

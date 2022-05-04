@@ -1,0 +1,6 @@
+[foo]
+localhost ansible_connnection=local
+
+[foo:vars]
+inventory_groups_var=foo
+

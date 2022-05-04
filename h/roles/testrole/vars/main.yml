@@ -1,0 +1,6 @@
+---
+# vars file for testrole
+vars_main_example: "this example is from the vars/main.yml file"
+
+default_main_example_override: "this example overrides the defaults/main.yml by the vars/main.yml"
+

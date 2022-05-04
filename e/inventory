@@ -1,0 +1,6 @@
+testhost ansible_connnection=local ansible_host=127.0.0.1
+
+[foo]
+localhost ansible_connnection=local
+
+

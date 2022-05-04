@@ -1,0 +1,6 @@
+---
+# defaults file for testrole
+#
+default_main_example: "this example is from the defaults/main.yml file"
+
+default_main_example_override: "this example is from the defaults/main.yml file"

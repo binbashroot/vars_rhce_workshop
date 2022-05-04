@@ -1,0 +1,6 @@
+---
+- hosts: all
+  gather_facts: False
+  roles:
+     - name: testrole 
+       myvar: "this var is set when calling the role" 

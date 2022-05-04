@@ -1,0 +1,36 @@
+---
+- hosts: all
+  gather_facts: False
+  vars:
+     plays_var: "This is a playbook variable"
+
+  tasks:
+      - debug:
+           var: inventory_var
+
+      - debug:
+           var: inventory_groups_var
+
+      - debug:
+           var: inventory_hosts_var
+
+      - debug:
+           var: groups_var
+
+      - debug:
+           var: hosts_var
+
+      - debug:
+           var: plays_var
+
+
+      - debug:
+           var: tasks_var
+
+      - debug:
+           var: roles_var
+
+      - debug:
+           var: facts_var
+
+

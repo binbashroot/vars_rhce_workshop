@@ -1,0 +1,4 @@
+[foo]
+localhost ansible_connnection=local
+
+

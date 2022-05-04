@@ -1,0 +1,6 @@
+localhost ansible_connnection=local
+
+
+[all:vars]
+ansible_user=vagrant
+ansible_password=vagrant
